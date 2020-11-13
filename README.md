@@ -9,5 +9,8 @@ Luego para correr la imagen antes creada, corremos el comando ` docker run --rm 
 
 Para probar que nuestro servicio está corriendo, simplemente hacemos un ` curl http://localhost:8090/you -v `, que en este caso nos debería devolver un mensaje `Hi there, I love you!`.
 
+### Problemas
+* Al inicio, la dirección del servidor la había dejado `:8090`, al hacerle el `curl` para probarlo me retornaba un error `curl: (52) Empty reply from server`, pero se soluciona escribiendo de forma explícita `0.0.0.0:8090`. 
+
 ### Autor 
 Diego Hinojosa Córdova
